@@ -16,14 +16,14 @@
   <p align="center">
     [PROJECT_DESCRIPTION]
     <br />
-    <a href="https://github.com/jf-delineate/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/delineateio/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/jf-delineate/repo_name">View Demo</a>
+    <a href="https://github.com/delineateio/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/jf-delineate/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/delineateio/repo_name/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jf-delineate/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/delineateio/repo_name/issues">Request Feature</a>
   </p>
 </p>
 
@@ -60,11 +60,11 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`jf-delineate`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+`delineateio`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 ### Built With
 
-* []()
+* [example](http://example.com)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -76,8 +76,15 @@ To get a local copy up and running follow these simple steps.
 This is an example of how to list things you need to use the software and how to install them.
 
 ```shell
+# clone the repo
+git clone https://github.com/delineateio/repo_name.git
+
+# create virtual env
+pyenv virtualenv 3.9.1 repo_name
+
 # installs the tooling requirements
 pip install -r requirements.txt
+
 # installs the git hook for pre-commit
 pre-commit install
 ```
@@ -85,8 +92,7 @@ pre-commit install
 ### Installation
 
 ```shell
-# clone the repo
-git clone https://github.com/jf-delineate/repo_name.git
+# todo
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -99,7 +105,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/jf-delineate/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/delineateio/repo_name/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -114,8 +120,8 @@ Contributions are what make the open source community such an amazing place to b
 
 If you would like to contribute to any Capco Digital OSS projects please read:
 
-* [Code of Conduct](https://github.com/jf-delineate/.github/blob/master/CODE_OF_CONDUCT.md)
-* [Contributing Guidelines](https://github.com/jf-delineate/.github/blob/master/CONTRIBUTING.md)
+* [Code of Conduct](https://github.com/delineateio/.github/blob/master/CODE_OF_CONDUCT.md)
+* [Contributing Guidelines](https://github.com/delineateio/.github/blob/master/CONTRIBUTING.md)
 
 <!-- LICENSE -->
 ## License
@@ -129,13 +135,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/jf-delineate/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/jf-delineate/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/jf-delineate/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/jf-delineate/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/jf-delineate/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/jf-delineate/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jf-delineate/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/jf-delineate/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/jf-delineate/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/jf-delineate/repo_name/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/delineateio/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/delineateio/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/delineateio/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/delineateio/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/delineateio/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/delineateio/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/delineateio/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/delineateio/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/delineateio/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/delineateio/repo_name/blob/master/LICENSE
