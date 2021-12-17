@@ -17,7 +17,7 @@ requirements:
 	@pyenv virtualenv -f -q $(python_version) $(repo) 1> /dev/null
 	@pyenv local $(repo)
 	@pip install -q --upgrade pip
-	@pip install -qr requirements.txt
+	@pip install -Uqr requirements.txt
 
 --hooks:
 	@git add .
