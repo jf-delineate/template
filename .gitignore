@@ -4,5 +4,6 @@
 
 *.env
 *.todo
+terraform.tfstate
 .DS_Store
 Brewfile.lock.json

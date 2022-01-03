@@ -1,2 +1,4 @@
+brew "circleci"
 brew "pyenv"
 brew "pyenv-virtualenv"
+brew "tfenv"
