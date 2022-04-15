@@ -80,32 +80,15 @@ To get a local copy up and running follow these simple steps.
 
 ### Local Dependencies
 
-A number of local dependencies are required.  To review the local dependencies:
+A number of local dependencies are required.  To review the local dependencies run `task dependencies:list`.  If new local dependencies then they should be added to the correct Taskfile in `./os` e.g. `taskfile.darwin.yaml`.
 
-* When using `MacOS` run `make requirements`
-* Otherwise run `cat Brewfile` to inspect the requirements
-
-If additional dependencies are required they should be added to `Brewfile`, for more details please review the official `brew bundle` documentation [here](https://github.com/Homebrew/homebrew-bundle).
+> Note that currently only `macOS` is configured and a PR should be submitted if either `Linux` or `Windows` are required.
 
 ### Local Setup
 
 This repo follows the principle of minimal manual setup of the local development environment.
 
- A `make` target has been provided for simplicity ```make init```, the `make` file can be inspected for more details.
-
- ```shell
-# use the folder name as the repo name
-make init
-
-# explicitly pass in the repo name (e.g. my-service)
-make repo=my-service init
- ```
-
-If at a later date repo name needs to be changed then the `make rename` target can be called.
-
-```shell
-make repo=my-service rename
-```
+ A `task` target has been provided for simplicity ```task init```, the `taskfile.yaml` file can be inspected for more details.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -122,10 +105,10 @@ A boilerplate `docker-compose` file is provided that can be used to manage local
 
 ```shell
 # stands up the local services
-docker-compose local-up
+task local:up
 
-# pulls down the local services
-docker-compose local-down
+# tears down the local services
+task local:down
 ```
 
 ### Cloud Infrastructure
@@ -133,14 +116,11 @@ docker-compose local-down
 A boilerplate configuration is provided for using `terraform` configuration to provision cloud infrastructure.  [tfenv](https://github.com/tfutils/tfenv) is used to select the version of `terraform` to use.  The repo template provides a single component in `ops/cloud/component`.
 
 ```shell
-# layer env variable
-LAYER=network
-
 # plans the network terraform config
-make layer=$LAYER cloud-plan
+task cloud:plan LAYER=component
 
 # auto approves applying the network terraform config
-make layer=$LAYER cloud-apply
+task cloud:apply LAYER=component
 ```
 
 <!-- ROADMAP -->
@@ -159,7 +139,7 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-If you would like to contribute to any Capco Digital OSS projects please read:
+If you would like to contribute to any delineate.io OSS projects please read:
 
 * [Code of Conduct](https://github.com/delineateio/.github/blob/master/CODE_OF_CONDUCT.md)
 * [Contributing Guidelines](https://github.com/delineateio/.github/blob/master/CONTRIBUTING.md)
@@ -182,14 +162,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [circleci-url]: https://img.shields.io/circleci/build/gh/delineateio/oss-template?style=for-the-badge&logo=circleci
 [pr-welcome-shield]: https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=for-the-badge&logo=github
 [pr-welcome-url]: https://github.com/delineateio/oss-template/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue
-[contributors-shield]: https://img.shields.io/github/contributors/capcodigital/oss-template.svg?style=for-the-badge&logo=github
-[contributors-url]: https://github.com/capcodigital/oss-template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/capcodigital/oss-template.svg?style=for-the-badge&logo=github
-[forks-url]: https://github.com/capcodigital/oss-template/network/members
-[stars-shield]: https://img.shields.io/github/stars/capcodigital/oss-template.svg?style=for-the-badge&logo=github
-[stars-url]: https://github.com/capcodigital/oss-template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/capcodigital/oss-template.svg?style=for-the-badge&logo=github
-[issues-url]: https://github.com/capcodigital/oss-template/issues
-[license-shield]: https://img.shields.io/github/license/capcodigital/oss-template.svg?style=for-the-badge&logo=github
-[license-url]: https://github.com/capcodigital/oss-template/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/delineateio/oss-template.svg?style=for-the-badge&logo=github
+[contributors-url]: https://github.com/delineateio/oss-template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/delineateio/oss-template.svg?style=for-the-badge&logo=github
+[forks-url]: https://github.com/delineateio/oss-template/network/members
+[stars-shield]: https://img.shields.io/github/stars/delineateio/oss-template.svg?style=for-the-badge&logo=github
+[stars-url]: https://github.com/delineateio/oss-template/stargazers
+[issues-shield]: https://img.shields.io/github/issues/delineateio/oss-template.svg?style=for-the-badge&logo=github
+[issues-url]: https://github.com/delineateio/oss-template/issues
+[license-shield]: https://img.shields.io/github/license/delineateio/oss-template.svg?style=for-the-badge&logo=github
+[license-url]: https://github.com/delineateio/oss-template/blob/master/LICENSE
 [product-screenshot]: https://github.com/delineateio/.github/blob/master/assets/screenshot.png?raw=true
