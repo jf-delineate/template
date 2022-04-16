@@ -8,7 +8,6 @@ env:
     sh: cat .python-version
   REQUIRED_NAME:
     sh: basename $(pwd)
-  PREVIOUS:
 
 includes:
   os: ./os/taskfile.{{OS}}.yaml
