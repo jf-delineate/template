@@ -10,7 +10,6 @@ tasks:
     cmds:
       - tfenv pin
       - task: pre-commit:init
-      - task: pre-commit:run
 
   rename:
     desc: change repo name in readme.md
@@ -20,11 +19,4 @@ tasks:
   pre-commit:init:
     desc: initialises pre-commit hooks
     cmds:
-      - pre-commit autoupdate
-      - git add .
       - pre-commit install
-
-  pre-commit:run:
-    desc: runs all pre-commit hooks
-    cmds:
-      - pre-commit run --all-files
