@@ -11,11 +11,6 @@ tasks:
       - tfenv pin
       - task: pre-commit:init
 
-  rename:
-    desc: change repo name in readme.md
-    cmds:
-      - sed -i '' s/$TEMPLATE_NAME/$REQUIRED_NAME/g README.md
-
   pre-commit:init:
     desc: initialises pre-commit hooks
     cmds:
