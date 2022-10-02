@@ -1,8 +1,19 @@
 {
-	"name": "Alpine",
+	"name": "Development",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": { "VARIANT": "3.16" }
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"editorconfig.edi",
+				"gruntfuggly.todo-tree",
+				"redhat.vscode-yaml",
+				"snyk-security.snyk-vulnerability-scanner",
+				"tyriar.sort-lines"
+			]
+		}
 	},
 	"remoteUser": "vscode"
 }
