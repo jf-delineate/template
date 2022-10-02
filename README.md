@@ -53,7 +53,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://delineate.io)
 The repo description should be added here and describe at least:
 
 * Purpose of the repo e.g. problem/opportunity statement
@@ -172,4 +171,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-url]: https://github.com/delineateio/oss-template/issues
 [license-shield]: https://img.shields.io/github/license/delineateio/oss-template.svg?style=for-the-badge&logo=github
 [license-url]: https://github.com/delineateio/oss-template/blob/master/LICENSE
-[product-screenshot]: https://github.com/delineateio/.github/blob/master/assets/screenshot.png?raw=true

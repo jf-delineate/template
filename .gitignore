@@ -5,3 +5,4 @@
 *.todo
 terraform.tfstate
 .DS_Store
+.dccache
