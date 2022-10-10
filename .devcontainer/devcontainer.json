@@ -26,6 +26,7 @@
 				"redhat.vscode-yaml",
 				"snyk-security.snyk-vulnerability-scanner",
 				"tyriar.sort-lines",
+		    "editorconfig.editorconfig",
         "hashicorp.terraform",
         "treetsidesoftware.code-spell-checker"
 			]
