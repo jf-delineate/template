@@ -6,6 +6,6 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "terraform"
-    directory: "/ops/cloud"
+    directory: "/ops/cloud/component"
     schedule:
       interval: "weekly"
