@@ -1,8 +1,8 @@
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
 updates:
-  - package-ecosystem: "gomod"
-    directory: "/"
+  - package-ecosystem: "pip"
+    directory: "/.devcontainer"
     schedule:
       interval: "weekly"
   - package-ecosystem: "terraform"
