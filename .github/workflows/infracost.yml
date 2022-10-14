@@ -1,4 +1,10 @@
-on: [pull_request]
+name: "Infracost Estimate"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
 jobs:
   infracost:
     name: Infracost
@@ -9,6 +15,7 @@ jobs:
     env:
       TF_ROOT: ops/cloud/component
       INFRACOST_TERRAFORM_CLOUD_TOKEN: ${{ secrets.TFC_TOKEN }}
+      INFRACOST_API_KEY: ${{ secrets.TFC_TOKEN }}
     steps:
       - name: Setup Infracost
         uses: infracost/actions/setup@v2
