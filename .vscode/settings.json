@@ -8,6 +8,7 @@
         "cmds",
         "codeql",
         "deps",
+        "devcontainer",
         "doctoc",
         "gomod",
         "gopath",
