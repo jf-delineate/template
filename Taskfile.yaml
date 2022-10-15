@@ -1,5 +1,7 @@
 version: 3
 
+silent: true
+
 includes:
   cloud: ./ops/taskfile.cloud.yaml
   local: ./ops/taskfile.local.yaml
@@ -16,13 +18,14 @@ tasks:
     desc: pins required version of terraform
     silent: true
     cmds:
-      - tfenv pin
+      - tfenv pin install &>/dev/null &
 
   pre-commit:init:
     desc: initialises pre-commit hooks
     silent: true
     cmds:
-      - pre-commit install
+      - pre-commit autoupdate &>/dev/null &
+      - pre-commit install install &>/dev/null &
 
   todo:
     desc: show to do list to

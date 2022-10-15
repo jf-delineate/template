@@ -8,7 +8,7 @@
 	"mounts": [
 		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
     "source=${env:HOME}${env:USERPROFILE}/.devcontainer.env,target=/home/vscode/.devcontainer.env,type=bind,readonly",
-		"source=${env:HOME}${env:USERPROFILE}/.docker,target=/home/vscode/.docker,type=bind,readonly",
+		"source=${env:HOME}${env:USERPROFILE}/.docker,target=/home/vscode/.docker,type=bind",
 		"source=${env:HOME}${env:USERPROFILE}/.terraform.d/credentials.tfrc.json,target=/home/vscode/.terraform.d/credentials.tfrc.json,type=bind,readonly"
 	],
 	"customizations": {
@@ -34,9 +34,12 @@
 		}
 	},
 	"features": {
-		"docker-from-docker": {
-			"version": "latest",
-			"moby": true
+		"ghcr.io/devcontainers/features/docker-in-docker:1": {
+      "version": "latest",
+      "moby": true
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+			"version": "latest"
 		}
 	},
 	"remoteUser": "vscode"
