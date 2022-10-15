@@ -1,3 +1,6 @@
+ci:
+    skip: [ggshield, terraform-fmt, terraform-validate]
+
 repos:
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
