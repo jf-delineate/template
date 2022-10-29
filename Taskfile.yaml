@@ -10,15 +10,8 @@ tasks:
   init:
     desc: initialise local environment
     cmds:
-      - task: terraform:pin
       - task: pre-commit:init
       - task: todo
-
-  terraform:pin:
-    desc: pins required version of terraform
-    silent: true
-    cmds:
-      - tfenv pin install &>/dev/null &
 
   pre-commit:init:
     desc: initialises pre-commit hooks
@@ -30,4 +23,6 @@ tasks:
   todo:
     desc: show to do list to
     cmds:
-      - cat ./.todo
+      - glow TODO.md
+    preconditions:
+      - stat TODO.md
