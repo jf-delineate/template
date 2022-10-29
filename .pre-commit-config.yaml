@@ -1,5 +1,5 @@
 ci:
-    skip: [ggshield, terraform-fmt, terraform-validate, pylint]
+    skip: [ggshield, pylint]
 
 repos:
 
@@ -36,13 +36,22 @@ repos:
       - id: check-json
         name: check json
 
-  - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.17
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.76.0
     hooks:
-      - id: terraform-fmt
-        name: terraform linting
-      - id: terraform-validate
-        name: terraform validation
+    - id: terraform_fmt
+      name: terraform formatting
+      args:
+        - --args=-diff
+        - --args=-write=true
+    - id: terraform_validate
+      name: terraform validation
+      args:
+        - --args=-json
+    - id: terraform_providers_lock
+      name: terraform providers lock
+      args:
+          - --args=-platform=darwin_amd64
 
   -  repo: https://github.com/psf/black
      rev: 22.10.0
