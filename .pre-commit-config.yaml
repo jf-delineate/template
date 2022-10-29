@@ -1,5 +1,5 @@
 ci:
-    skip: [ggshield, terraform-fmt, terraform-validate, circleci-config-validate]
+    skip: [ggshield, terraform-fmt, terraform-validate, pylint]
 
 repos:
 
@@ -43,3 +43,25 @@ repos:
         name: terraform linting
       - id: terraform-validate
         name: terraform validation
+
+  -  repo: https://github.com/psf/black
+     rev: 22.10.0
+     hooks:
+      - id: black
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [python]
+        args: ["-rn", "-sn"]
+
+  - repo: https://github.com/tekwizely/pre-commit-golang
+    rev: v1.0.0-beta.5
+    hooks:
+      - id: go-mod-tidy
+        name: golang tidying
+      - id: golangci-lint-repo-mod
+        name: golang linting
