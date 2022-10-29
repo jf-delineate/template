@@ -1,5 +1,5 @@
 ci:
-    skip: [ggshield, pylint]
+    skip: [ggshield, pylint, terraform_fmt, terraform_validate, terraform_providers_lock]
 
 repos:
 
