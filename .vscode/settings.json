@@ -39,6 +39,7 @@
         "venv",
         "virtualenv",
         "visualstudioexptteam",
+        "wontfix",
         "yapf"
     ]
 }
