@@ -1,2 +1,2 @@
-workspaces { name = "oos-template" }
+workspaces { name = "oss-template" }
 organization = "delineateio"
