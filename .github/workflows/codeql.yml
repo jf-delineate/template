@@ -1,4 +1,5 @@
 name: "CodeQL Scan"
+
 on: pull_request
 
 jobs:
