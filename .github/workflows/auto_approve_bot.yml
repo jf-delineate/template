@@ -1,21 +1,14 @@
-name: Auto approve bots
+name: Auto approve
 
 on: pull_request
-
-permissions:
-  contents: write
-  pull-requests: write
 
 jobs:
   auto-approve:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     if: contains(fromJson('["*[bot]", "jf-delineate"]'), github.actor)
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:
           review-message: "Auto approved automated PR"
-      - name: Enable auto-merge for bots
-        run: gh pr merge --auto --merge "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
