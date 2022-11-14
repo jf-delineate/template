@@ -1,11 +1,11 @@
 name: "Snyk IaC Scan"
+
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    types: [opened, reopened]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '* 23 * * 1'
+
 jobs:
   snyk:
     runs-on: ubuntu-latest
