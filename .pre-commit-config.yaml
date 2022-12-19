@@ -17,7 +17,7 @@ repos:
         args: ["--update-only"]
 
   - repo: https://github.com/gitguardian/ggshield
-    rev: v1.14.1
+    rev: v1.14.2
     hooks:
       - id: ggshield
         name: gitguardian scanning
@@ -55,7 +55,7 @@ repos:
           - --args=-platform=linux_amd64
 
   -  repo: https://github.com/psf/black
-     rev: 22.10.0
+     rev: 22.12.0
      hooks:
       - id: black
 
