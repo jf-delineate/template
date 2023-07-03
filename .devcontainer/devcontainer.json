@@ -5,10 +5,6 @@
 		"args": { "VARIANT": "bullseye" }
 	},
 	"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined", "--init" ],
-	"mounts": [
-		"source=${env:HOME}${env:USERPROFILE}/.devcontainer.env,target=/home/vscode/.devcontainer.env,type=bind,readonly",
-		"source=${env:HOME}${env:USERPROFILE}/.terraform.d/credentials.tfrc.json,target=/home/vscode/.terraform.d/credentials.tfrc.json,type=bind,readonly"
-	],
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -34,12 +30,10 @@
 				"gruntfuggly.todo-tree",
 				"hashicorp.terraform",
 				"ms-azuretools.vscode-docker",
-				"ms-kubernetes-tools.vscode-kubernetes-tools",
 				"ms-python.python",
 				"ms-python.vscode-pylance",
 				"njpwerner.autodocstring",
 				"redhat.vscode-yaml",
-				"snyk-security.snyk-vulnerability-scanner",
 				"treetsidesoftware.code-spell-checker",
 				"tyriar.sort-lines",
 				"visualstudioexptteam.intellicode-api-usage-examples",
@@ -65,8 +59,10 @@
 		},
 		"ghcr.io/devcontainers/features/go:1": {
 			"version": "latest"
-		}
+		},
+    "ghcr.io/devcontainers-contrib/features/go-task:1": {
+      "version": "latest"
+    }
 	},
-	"postCreateCommand": ["bash", "./.devcontainer/install.sh"],
 	"remoteUser": "vscode"
 }

@@ -10,14 +10,21 @@ tasks:
   init:
     desc: initialise local environment
     cmds:
-      - task: pre-commit:init
+      - task: pre-commit
+      - task: installs
       - task: todo
 
-  pre-commit:init:
+  pre-commit:
     desc: initialises pre-commit hooks
     cmds:
       - pre-commit autoupdate &>/dev/null &
       - pre-commit install install &>/dev/null &
+
+  installs:
+    desc: installs packages
+    cmds:
+      - pip install -r .devcontainer/requirements.txt
+      - go install github.com/charmbracelet/glow@latest
 
   pre-commit:run:
     desc: run pre-commit hooks
