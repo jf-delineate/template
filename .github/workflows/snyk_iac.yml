@@ -1,24 +1,16 @@
-name: "Snyk IaC Scan"
-
+name: "tfsec IaC Scan"
 on:
   pull_request:
     types: [opened, reopened]
   schedule:
-    - cron: '* 23 * * 1'
-
+    - cron: '0 0 * * *'
 jobs:
-  snyk:
+  tfsec:
+    name: tfsec
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Run Snyk to check configuration files for security issues
-        continue-on-error: true
-        uses: snyk/actions/iac@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          file: ./ops/cloud/component
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: snyk.sarif
+      - name: Clone repo
+        uses: actions/checkout@master
+      - name: tfsec
+        uses: aquasecurity/tfsec-action@v1.0.0
