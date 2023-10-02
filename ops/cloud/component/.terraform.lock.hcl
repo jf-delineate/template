@@ -27,23 +27,23 @@ provider "registry.terraform.io/cloudflare/cloudflare" {
 }
 
 provider "registry.terraform.io/hashicorp/google" {
-  version     = "4.82.0"
-  constraints = ">= 4.40.0, < 5.0.0"
+  version     = "5.0.0"
+  constraints = ">= 4.40.0, < 6.0.0"
   hashes = [
-    "h1:+fK/35ZXJpT9ObamkkfPv04ckI7/vZz2HD7YaX+FmRE=",
-    "h1:L5uRqRT63VLPVHzd57xMkNmLf+liFVt7KxcdZNwWmxA=",
-    "h1:yobHGNuj2Z0WDd3w5QD4KX1x7+zP/1u13Khe1pCYz1Y=",
-    "zh:057948f706d110fbc1ca87a6d1b84ce371001e1ddbb2a46a97e111a504afa563",
-    "zh:199fa8cc4c861514218f47ae46983788e82c92f919442052991a246e20618b15",
-    "zh:448d1bb13f7f3a2eff4de601049fe5fd877f7c875b65bec5f88ebfafdfcde3e7",
-    "zh:8f29d1e17954a33e6676c97cedd54d552102651ebd804de4eb52a553e05dbeb8",
-    "zh:993fa57d502a7e95e3b03b172a8bcfc3b72bc93c2c49eb0ded8bf98d37e0e7fc",
-    "zh:9fe645c4a42f826c849f209de4d71ef5f374ffa3c87e4a133e645da7224299b8",
-    "zh:ad9241394cfc0c7918ef0d3909f72daaaf0124ac108a45151fd09e051358023f",
-    "zh:c030521d5dfb07d5315f6af0e96c198889a23d13c32fd608036b704c6cadfa26",
-    "zh:c8512ee2087cccc09223f8e350509cb6fe53465c8a7b47d2a3c05c09262f16a1",
-    "zh:d03687da73d28d1bbace504b9a7e578522930762c964ede6fa4d5ebb8f7a607a",
+    "h1:J6n7/Su0fc+cfDVI43fch8w60vjUJLuzIzQHGmBS4Eo=",
+    "h1:gntc+j/f7b9oB+Fa5N5oOyB48Ldz7N4Z72dChzoiysw=",
+    "h1:nMddLFwfVK+kRPCRDKaSlbe/N2BU8wWYo4U5pKE9rbY=",
+    "zh:28ca14826a86d703d1b30474f46d8e4383ddced96e42e8064544bdb1cd0e2200",
+    "zh:2cd61ecdfd4b6d787861ccfa593c24a84bc34445c13e3e0ca433fd60128dc1a4",
+    "zh:5ad2e73b0eaa349b3dea4deec648cbfb5ba7e8c5353ffe30d5ad2158dea8396a",
+    "zh:797295ba11466be70edcf99b9f3c141ea8f883478fdd972152ce735f346b3ac2",
+    "zh:7a85dbb8890f9109b3febb760e5f5f16831e31ba2d31523db9da539ccceec6d8",
+    "zh:869013bc221a51068f7371f6fa76a796baa092f8eaff46044fce421a177baf06",
+    "zh:9397c53bcdfdd641e6d705969b1c54eb6a375c72f45a09650721f422f6d97702",
+    "zh:c3c60fd46b5a3132dc90940aa2f6ad65b9d18a48fae8e13166d95ab0dcc56a96",
+    "zh:c4f9c44e251f8454969ba088440bbb549428e0eef7c8f1500a6aa712170fe96f",
+    "zh:e1e08af2a484a37a22f7603389fdd4220c3dab43164f9f5374fd69efb0bf995e",
+    "zh:e9d1c928e797ffbf24722670cf610e15f267c8c1831f725ac912cae81e2ec5b9",
     "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
-    "zh:fe7e47546562b69a51d3706b12a9aa3b5fd478b18ba012980b8613dd12975d48",
   ]
 }
